@@ -24,6 +24,7 @@ function newIcecream (req, res) {
 }
 
 async function create(req, res) {
+    req.body.available = !! req.body.available
     await Icecream.create(req.body)
     res.redirect('/icecream')
 }

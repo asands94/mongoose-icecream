@@ -20,6 +20,7 @@ app.set('view engine', 'ejs')
 app.use(morgan('dev')) // request logger
 app.use(express.json()) // parse incoming requests as JSON object
 app.use(express.urlencoded({extended: false})) // parse strings & arrays
+app.use(express.static(path.join(__dirname, 'public'))) 
 
 // ROUTES
 app.use('/api', function(req, res){

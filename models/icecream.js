@@ -4,8 +4,8 @@ const {Schema, model} = mongoose
 
 const icecreamSchema = new Schema({
     flavor: {type: String},
-    dairyFree: {type: Boolean},
-    available: {type: Boolean}
+    dairyFree: {type: Boolean, default: false},
+    available: {type: Boolean, default: false}
 }, {
     timestamps: true
 })
