@@ -1,3 +1,8 @@
 <%- include('../partials/header.ejs') %>
 
+<% icecream.forEach(function (cream) { %>
+    <h3><%= cream.flavor %></h3>
+    <a href="/icecream/<%=cream.id%>">View Details</a>
+<% }) %>
+
 <%- include('../partials/footer.ejs') %>
