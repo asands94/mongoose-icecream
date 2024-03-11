@@ -1,0 +1,13 @@
+<%- include('../partials/header.ejs') %>
+
+<form action="/icecream" method="POST">
+    <label for="flavor">Flavor</label>
+    <input id="flavor" name="flavor" placeholder="flavor">
+    <label for="dairy-free">Dairy Free?</label>
+    <input id="dairy-free" name="dairyFree" type="checkbox">
+    <label for="available">Available?</label>
+    <input id="available" name="available" type="checkbox">
+    <input type="submit" value="Add Flavor">
+</form>
+
+<%- include('../partials/footer.ejs') %>

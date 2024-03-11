@@ -2,7 +2,9 @@ const Icecream = require('../models/icecream')
 
 module.exports = {
     index,
-    show
+    show,
+    new: newIcecream,
+    create,
 }
 
 
@@ -15,4 +17,13 @@ async function show (req, res) {
     const icecream = await Icecream.findById(req.params.id)
 
     res.render('icecream/show', {icecream})
+}
+
+function newIcecream (req, res) {
+    res.render('icecream/new')
+}
+
+async function create(req, res) {
+    await Icecream.create(req.body)
+    res.redirect('/icecream')
 }
